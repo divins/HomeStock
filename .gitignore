@@ -1,0 +1,16 @@
+.bundle
+db/*.sqlite*
+config/database.yml
+log/*.log
+tmp/
+coverage/
+doc/
+.yardoc/
+public/stylesheets/
+public/javascripts/
+.sass-cache
+public/uploads
+public/assets
+bin/*
+rerun.txt
+*.rbc
