@@ -23,6 +23,10 @@ gem "jquery-rails"
 gem 'client_side_validations'
 # gem 'high_voltage'
 
+group :production do
+  gem 'pg'
+end
+
 group :development do
   gem 'foreman'
 end
