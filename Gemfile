@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.0.rc4'
 
 gem "devise"
+gem "oa-oauth", :require => "omniauth/oauth"
 gem "slim"
 gem "slim-rails"
 gem 'compass', git: 'https://github.com/chriseppstein/compass.git', branch: 'rails31'
