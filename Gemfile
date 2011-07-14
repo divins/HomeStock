@@ -22,7 +22,7 @@ gem 'button_form'
 gem "jquery-rails"
 # gem 'carrierwave'
 gem 'client_side_validations'
-# gem 'high_voltage'
+gem 'high_voltage'
 
 group :production do
   gem 'pg'
