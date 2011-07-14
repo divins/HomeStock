@@ -1,0 +1,23 @@
+doctype 5
+html
+  head
+    title HomeStock
+
+  body
+    #wrapper
+      #top
+        #logo
+        -if current_user
+          #login_box
+            span
+              = 'Signed in as: '
+              strong = current_user.nickname
+        -else
+          #login_box
+            = link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook)
+
+      #container
+        #content
+          = yield
+
+      #footer
