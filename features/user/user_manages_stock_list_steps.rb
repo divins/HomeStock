@@ -4,15 +4,17 @@ Given /^I am logged in as a user$/ do
 end
 
 Given /^I have some stock items$/ do
-  pending # express the regexp above with the code you wish you had
+  @current_user.items << Item.make(3)
 end
 
 Given /^another user with some stock items exists$/ do
-  pending # express the regexp above with the code you wish you had
+  @another_user = User.make
+  @current_user.items << Item.make!(2)
 end
 
 When /^I am at stock list$/ do
-  pending # express the regexp above with the code you wish you had
+  visit user_items_path{@urrent_user}
+  save_and_open_page
 end
 
 Then /^I should see those items in my stock list$/ do

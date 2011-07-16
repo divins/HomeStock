@@ -8,3 +8,10 @@ User.blueprint do
   password { 'secret1234' }
   password_confirmation { object.password }
 end
+
+Item.blueprint do
+  category { "food" }
+  short_description { "Item #{sn}" }
+  desired_stock { rand(1..4) }
+  actual_stock { rand(1..4) }
+end
