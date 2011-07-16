@@ -1,0 +1,6 @@
+tr id=dom_id(item) class=dom_class(item)
+  td = item.short_description
+  td = item.desired_stock
+  td = item.actual_stock
+  td.actions
+    = link_to t('actions.edit'), edit_user_item_path(item)
