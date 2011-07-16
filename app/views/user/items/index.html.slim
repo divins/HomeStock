@@ -1,0 +1,10 @@
+hgroup
+  h2= t '.title'
+
+#actions
+  =link_to t('pages.landing.new_job_offer'), action: 'new'
+
+-if @items.empty?
+  p=t('.no_item')
+-else
+  p=t('.whaaaaaaaaat')
