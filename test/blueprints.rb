@@ -10,7 +10,7 @@ User.blueprint do
 end
 
 Item.blueprint do
-  category { "food" }
+  category { "meat" }
   short_description { "Item #{sn}" }
   desired_stock { rand(4) }
   actual_stock { rand(4) }

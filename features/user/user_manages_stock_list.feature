@@ -15,12 +15,13 @@ Feature: User manages stock list
 
   Scenario: User adds stock item
     Given I am at adding stock item page
-    When I fullfill the form
+    When I fullfill new form
     Then I should see new item in stock list
 
   Scenario: User edits stock item
-    Given I am at edit item page
-    When I fullfill the form
+    Given I have some stock items
+    And I am at edit item page
+    When I fullfill edit form
     Then I should see modifications done in this item
 
   Scenario: User deletes stock item
