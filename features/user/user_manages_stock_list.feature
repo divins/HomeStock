@@ -30,7 +30,12 @@ Feature: User manages stock list
     When I delete a stock item
     Then I should not see this item in stock list
 
+  Scenario: User visits root path
+    When I visit home path
+    Then I should be at user stock list
+
   Scenario: User navigates to item edit page
     Given I have some stock items
-    And I click to edit an item
+    And I am at stock list
+    When I click to edit an item
     Then I should be at this item edit page

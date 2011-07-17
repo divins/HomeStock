@@ -14,6 +14,7 @@ end
 
 When /^I am at stock list$/ do
   visit user_items_path()
+  save_and_open_page
 end
 
 Then /^I should see those items in my stock list$/ do
@@ -82,10 +83,22 @@ Then /^I should not see this item in stock list$/ do
   end
 end
 
-Given /^I click to edit an item$/ do
+When /^I visit home path$/ do
+  # visit user_root_path
+  # save_and_open_page
   pending # express the regexp above with the code you wish you had
 end
 
-Then /^I should be at this item edit page$/ do
+Then /^I should be at user stock list$/ do
+  # current_path.must_equal user_items_path
   pending # express the regexp above with the code you wish you had
+end
+
+When /^I click to edit an item$/ do
+  @first_item = @current_user.items.first
+  click_link I18n.t('user.items.item.actions.edit')
+end
+
+Then /^I should be at this item edit page$/ do
+  current_path.must_equal edit_user_item_path(@first_item)
 end
