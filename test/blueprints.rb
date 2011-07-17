@@ -12,6 +12,6 @@ end
 Item.blueprint do
   category { "food" }
   short_description { "Item #{sn}" }
-  desired_stock { rand(1..4) }
-  actual_stock { rand(1..4) }
+  desired_stock { rand(4) }
+  actual_stock { rand(4) }
 end
