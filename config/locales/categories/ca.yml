@@ -1,0 +1,12 @@
+ca:
+  categories:
+    blank: 'Escull una categoria...'
+    breakfast: Esmorzars
+    vegetable: Verdures
+    fruit: Fruites
+    fish: Peix
+    meat: Carn
+    sauces: Salses
+    drinks: Begudes
+    pasta: Pasta
+    snack: Aperitius
