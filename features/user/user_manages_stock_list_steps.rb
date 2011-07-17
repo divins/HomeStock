@@ -72,12 +72,14 @@ Then /^I should see modifications done in this item$/ do
 end
 
 When /^I delete a stock item$/ do
-  save_and_open_page
-  click_link I18n.t('actions.delete')
+  @first_item = @current_user.items.first
+  click_link I18n.t('user.items.item.actions.delete')
 end
 
 Then /^I should not see this item in stock list$/ do
-  pending # express the regexp above with the code you wish you had
+  within 'table#items' do
+    page.has_content?(@first_item.short_description).must_equal false
+  end
 end
 
 Given /^I click to edit an item$/ do

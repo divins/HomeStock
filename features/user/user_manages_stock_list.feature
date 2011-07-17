@@ -26,6 +26,7 @@ Feature: User manages stock list
 
   Scenario: User deletes stock item
     Given I have some stock items
+    And I am at stock list
     When I delete a stock item
     Then I should not see this item in stock list
 

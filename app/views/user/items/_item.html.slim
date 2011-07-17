@@ -3,4 +3,5 @@ tr id=dom_id(item) class=item.category
   td = item.desired_stock
   td = item.actual_stock
   td.actions
-    = link_to t('actions.edit'), edit_user_item_path(item)
+    = link_to t('.actions.edit'), edit_user_item_path(item)
+    = link_to t('.actions.delete'), user_item_path(item), method: :delete
