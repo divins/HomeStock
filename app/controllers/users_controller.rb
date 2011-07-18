@@ -1,3 +1,3 @@
-class UsersController < ApplicationController
-  before_filter :authenticate_user!
+class UsersController < InheritedResources::Base
+  actions :show, :index
 end

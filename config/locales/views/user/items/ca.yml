@@ -1,0 +1,10 @@
+ca:
+  user:
+    items:
+      new:
+        title: 'Afegir producte a la llista'
+        subtitle: ''
+      item:
+        actions:
+          edit: 'Editar'
+          delete: 'Eliminar'
