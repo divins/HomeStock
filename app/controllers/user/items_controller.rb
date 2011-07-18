@@ -1,12 +1,12 @@
 class User::ItemsController < User::ApplicationController
 
-  before_filter :load_categories, only: [:new, :create, :edit, :update]
+  before_filter :load_categories, only: [:new, :edit]
 
   inherit_resources
 
   actions :index, :new, :create, :edit, :update, :destroy
 
-  protected
+  private
 
   def begin_of_association_chain
     current_user
