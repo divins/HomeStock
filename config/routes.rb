@@ -6,7 +6,7 @@ Homestock::Application.routes.draw do
 
   # resources :pages
   # match '/' => 'pages#show', :id => 'home'
-  root :to => "pages#home"
+  root to: "pages#home"
 
   namespace :user do
     resources :items
