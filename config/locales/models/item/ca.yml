@@ -1,0 +1,11 @@
+ca:
+  activerecord:
+    models:
+      item: 'Producte'
+      items: 'Productes'
+    attributes:
+      item:
+        category: 'Categoria'
+        short_description: 'Descripció curta'
+        desired_stock: 'Estoc desitjat'
+        actual_stock: 'Estoc actual'

@@ -1,0 +1,11 @@
+hgroup
+  h2= t '.title'
+
+#actions
+  =link_to t('.add'), action: 'new'
+
+-if @items.empty?
+  p=t('.no_item')
+-else
+  table#items
+    = render partial: 'item', collection: @items

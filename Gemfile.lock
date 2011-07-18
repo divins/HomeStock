@@ -116,6 +116,10 @@ GEM
     guard-minitest (0.4.0)
       guard (~> 0.4)
     has_scope (0.5.0)
+    heroku (2.3.6)
+      launchy (>= 0.3.2)
+      rest-client (~> 1.6.1)
+      term-ansicolor (~> 1.0.5)
     high_voltage (1.0.0)
     hike (1.1.0)
     i18n (0.6.0)
@@ -183,6 +187,8 @@ GEM
     rb-fsevent (0.4.1)
     rdoc (3.8)
     responders (0.6.4)
+    rest-client (1.6.3)
+      mime-types (>= 1.16)
     rubyzip (0.9.4)
     sass (3.1.4)
     sass-rails (3.1.0.rc.4)
@@ -242,7 +248,8 @@ DEPENDENCIES
   guard
   guard-annotate
   guard-cucumber
-  guard-minitest
+  guard-minitest (>= 0.4.0)
+  heroku
   high_voltage
   inherited_resources
   jquery-rails

@@ -1,28 +1,34 @@
 source 'http://rubygems.org'
 
+# Base
 gem 'rails', '3.1.0.rc4'
-
 gem "devise"
+gem "jquery-rails"
 gem "oa-oauth", :require => "omniauth/oauth"
+
+# Template
 gem "slim"
 gem "slim-rails"
 gem 'compass', git: 'https://github.com/chriseppstein/compass.git', branch: 'rails31'
-
-# Asset template engines
 gem 'sass-rails'
 # gem 'coffee-script'
 # gem 'barista'
 
+# View improvements
 gem 'simple_form'
 gem "simple-navigation"
-gem 'inherited_resources'
 gem 'flash_messages_helper'
-gem 'responders'
 gem 'button_form'
-gem "jquery-rails"
-# gem 'carrierwave'
 gem 'client_side_validations'
+gem "flash_messages_helper"
+
+# Controllers improvements
+gem 'inherited_resources'
+gem 'responders'
 gem 'high_voltage'
+
+# Uploads
+# gem 'carrierwave'
 
 group :production do
   gem 'pg'
@@ -30,6 +36,7 @@ end
 
 group :development do
   gem 'foreman'
+  gem 'heroku'
 end
 
 group :test do
@@ -41,16 +48,17 @@ group :test do
   gem 'simplecov', require: false
   gem 'database_cleaner'
   gem 'turn', require: false, git: 'git://github.com/TwP/turn.git'
-  gem 'machinist', '>= 2.0.0.beta1'
   gem 'launchy'
   gem 'growl'
   gem 'rb-fsevent'
   gem 'guard'
   gem 'guard-cucumber'
-  gem 'guard-minitest'
+  gem 'guard-minitest', '>= 0.4.0'
   gem 'guard-annotate'
 end
 
 group :development, :test do
   gem 'sqlite3'
+  # gem 'forgery'
+  gem 'machinist', '>= 2.0.0.beta1'
 end

@@ -1,0 +1,8 @@
+= simple_form_for ['user', @item], validate: true, html: {autocomplete: 'off'} do |form|
+  fieldset
+    = form.input :category, collection: @categories, include_blank: t('categories.blank')
+    = form.input :short_description
+    = form.input :desired_stock
+    = form.input :actual_stock
+  .submit
+    = form.submit id: 'new_item_commit'
