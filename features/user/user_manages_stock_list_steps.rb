@@ -14,7 +14,6 @@ end
 
 When /^I am at stock list$/ do
   visit user_items_path()
-  save_and_open_page
 end
 
 Then /^I should see those items in my stock list$/ do
