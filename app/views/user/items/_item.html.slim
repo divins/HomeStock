@@ -5,3 +5,6 @@ tr id=dom_id(item) class=item.category
   td.actions
     = link_to t('.actions.edit'), edit_user_item_path(item)
     = link_to t('.actions.delete'), user_item_path(item), method: :delete
+  td.control
+    = link_to t('.actions.plus'), plus_one_user_item_path(item), method: :put
+    = link_to t('.actions.minus'), minus_one_user_item_path(item), method: :put
