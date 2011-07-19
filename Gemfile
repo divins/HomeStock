@@ -47,7 +47,7 @@ group :test do
   gem 'mocha'
   gem 'simplecov', require: false
   gem 'database_cleaner'
-  gem 'turn', require: false, git: 'git://github.com/TwP/turn.git'
+  gem 'purdytest', require: false
   gem 'launchy'
   gem 'growl'
   gem 'rb-fsevent'
