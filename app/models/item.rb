@@ -8,10 +8,13 @@ class Item < ActiveRecord::Base
   validate :check_category
 
   def plus_one!
-    update_attribute(:actual_stock, (actual_stock+1))
+    self.actual_stock = self.actual_stock+1
+    self.save!
   end
+
   def minus_one!
-    update_attribute(:actual_stock, (actual_stock-1))
+    self.actual_stock -= 1 if self.actual_stock > 0
+    save!
   end
 
   private

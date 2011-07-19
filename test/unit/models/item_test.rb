@@ -41,4 +41,26 @@ describe Item do
       @item.valid?.must_equal false
     end
   end
+
+  describe "instance methods" do
+    describe "#plus_one!" do
+      it "adds one to actual_stock quantity" do
+        @item.actual_stock = 2
+        @item.plus_one!
+        @item.actual_stock.must_equal 3
+      end
+    end
+    describe "#minus_one!" do
+      it "substracts one to an actual_stock quantity greater than 0" do
+        @item.actual_stock = 5
+        @item.minus_one!
+        @item.actual_stock.must_equal 4
+      end
+      it "substracts one to an actual_stock quantity equal to 0" do
+        @item.actual_stock = 0
+        @item.minus_one!
+        @item.actual_stock.must_equal 0
+      end
+    end
+  end
 end

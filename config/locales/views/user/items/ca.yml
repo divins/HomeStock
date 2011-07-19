@@ -8,3 +8,5 @@ ca:
         actions:
           edit: 'Editar'
           delete: 'Eliminar'
+      index:
+        title: "Llistat de productes"

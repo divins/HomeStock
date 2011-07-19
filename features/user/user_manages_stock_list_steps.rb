@@ -64,7 +64,8 @@ When /^I fullfill edit form$/ do
 end
 
 Then /^I should see modifications done in this item$/ do
-  within 'table#items tr#item_1.snack' do
+  save_and_open_page
+  within 'table#items .snack' do
     page.has_content?('Llauna d\'olives').must_equal true
     page.has_content?('10').must_equal true
     page.has_content?('7').must_equal true
@@ -83,14 +84,13 @@ Then /^I should not see this item in stock list$/ do
 end
 
 When /^I visit home path$/ do
-  # visit user_root_path
-  # save_and_open_page
-  pending # express the regexp above with the code you wish you had
+  visit user_root_path
 end
 
 Then /^I should be at user stock list$/ do
-  # current_path.must_equal user_items_path
-  pending # express the regexp above with the code you wish you had
+  within "h2" do
+    page.has_content?(I18n.t('user.items.index.title')).must_equal true
+  end
 end
 
 When /^I click to edit an item$/ do
