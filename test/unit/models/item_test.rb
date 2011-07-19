@@ -2,7 +2,7 @@ require 'test_helper'
 
 describe Item do
   before do
-    @item = Item.new
+    @item = Item.make
   end
 
   describe "associations" do
@@ -16,9 +16,9 @@ describe Item do
       @item.category = nil
       @item.valid?.must_equal false
     end
-    it "is not valid with an invalid category" do
-      @item.category = "meat"
-      @item.valid?.must_equal true
+    it "is not valid with nonexistent category" do
+      @item.category = "fap"
+      @item.valid?.must_equal false
     end
     it "is not valid without a short description" do
       @item.short_description = nil
@@ -38,7 +38,7 @@ describe Item do
     end
     it "is not valid with subzero actual stock" do
       @item.actual_stock = -1
-      @item.valid?.must_equal true
+      @item.valid?.must_equal false
     end
   end
 end
