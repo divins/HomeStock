@@ -11,6 +11,7 @@ gem "slim"
 gem "slim-rails"
 gem 'compass', git: 'https://github.com/chriseppstein/compass.git', branch: 'rails31'
 gem 'sass-rails'
+gem 'uglifier'
 # gem 'coffee-script'
 # gem 'barista'
 
