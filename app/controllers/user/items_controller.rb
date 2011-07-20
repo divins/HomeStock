@@ -6,6 +6,16 @@ class User::ItemsController < User::ApplicationController
 
   actions :index, :new, :create, :edit, :update, :destroy
 
+  def plus_one
+    resource.plus_one!
+    redirect_to :back
+  end
+
+  def minus_one
+    resource.minus_one!
+    redirect_to :back
+  end
+
   private
 
   def begin_of_association_chain

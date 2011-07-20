@@ -1,5 +1,10 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
-en:
-  hello: "Hello world"
+ca:
+  app:
+    sign_up: "Registra't"
+    sign_in: "Accedeix"
+    sign_in_with_fb: "Entra a través de Facebook"
+    signed_in_as: "Has entrat com a: "
+    sign_out: "Desconecta't"
+    description: "HomeStock és una aplicació que et permet portar al dia l'inventari dels productes que consumeixes a diari a casa"
+    access: "Pots accedir creant una compta desde el formulari inferior o a través de Facebook o Twitter"
+    what: "Ja ets un usuari registrat! Ves a les teves dades!"
