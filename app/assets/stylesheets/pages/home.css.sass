@@ -1,0 +1,142 @@
+@import includes/base
+
+body
+
+  a, a:hover, a:active
+    outline: none
+
+  #top
+    margin: 10px
+    padding: 10px
+    height: 50px
+    background: url(../images/logo.png) top left no-repeat
+
+    #logo
+      float: left
+
+    #login_box
+      float: right
+  #content
+    margin-top: 20px
+    width: 900px
+    h1
+      margin: 5px
+      padding: 5px
+      font-size: 2em
+      color: #222
+    h2, h3
+      margin: 0px
+      padding: 0px
+    h2
+      font-weight: bold
+      font-size: 1.6em
+    h3
+      font-weight: normal
+      font-family: "Georgia"
+      font-size: 1.4em
+
+    p
+      margin-bottom: 1em
+
+    #access_box
+      +border-radius(10px)
+      position: relative
+      overflow: hidden
+      +inline-block
+      margin: 25px
+      width: 200px
+      height: 300px
+      float: left
+      background-color: #222
+      // line-height: 150px
+      text-align: center
+      border: 1px solid #000
+      @include background-image(linear-gradient(color-stops(#000, #333)))
+      +box-shadow(#aaa 0px 3px 6px 0px)
+
+      .sign_in
+        position: absolute
+        left: 0px
+        width: 100%
+        top: 20%
+      .sign_up
+        position: absolute
+        left: 0px
+        width: 100%
+        bottom: 20%
+      a
+        +button-cupid-green
+        font-weight: bold
+        color: #222
+        font-size: 0.9em
+        text-decoration: none
+
+    #info
+      margin: 25px
+      width: 500px
+      height: 300px
+      float: right
+
+    #login_box
+      color: #bbb
+      +border-radius(10px)
+      position: relative
+      overflow: hidden
+      +inline-block
+      margin: 25px
+      width: 600px
+      height: 100px
+      float: left
+      background-color: #222
+      line-height: 100px
+      text-align: center
+      border: 1px solid #000
+      @include background-image(linear-gradient(color-stops(#000, #333)))
+      +box-shadow(#aaa 0px 3px 6px 0px)
+      .inputs
+        margin-left: 25px
+        float: left
+        div
+          display: inline
+          input
+            width: 150px
+            margin: 0px 15px 0px 9px
+      .actions
+        margin-right: 25px
+        float: right
+        button
+          +button-cupid-green
+
+    #register_box
+      color: #bbb
+      +border-radius(10px)
+      position: relative
+      overflow: hidden
+      +inline-block
+      margin: 25px
+      width: 500px
+      height: 170px
+      float: left
+      background-color: #222
+      line-height: 50px
+      text-align: center
+      border: 1px solid #000
+      @include background-image(linear-gradient(color-stops(#000, #333)))
+      +box-shadow(#aaa 0px 3px 6px 0px)
+      .inputs
+        margin-top: 10px
+        margin-right: 25px
+        float: right
+        div
+          text-align: right
+          input
+            width: 150px
+            margin: 0px 15px 0px 9px
+      .actions
+        margin-left: 25px
+        float: left
+        button
+          +button-cupid-green
+
+  #container
+    overflow: hidden

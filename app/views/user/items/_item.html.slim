@@ -4,7 +4,15 @@ tr id=dom_id(item) class=item.category
     = link_to t('.actions.delete'), user_item_path(item), method: :delete, confirm: t('.confirmations.delete')
   td.short_description = item.short_description
   td.desired_stock = item.desired_stock
-  td.actual_stock = item.actual_stock
+  td.actual_stock
+    -if(item.desired_stock <= item.actual_stock)
+      .ok = item.actual_stock
+    -elsif(item.actual_stock == 0)
+      .outta = item.actual_stock
+    -else
+      .need = item.actual_stock
   td.control
-    = link_to t('.actions.plus'), plus_one_user_item_path(item), method: :put
-    = link_to t('.actions.minus'), minus_one_user_item_path(item), method: :put
+    .plus
+      = link_to t('.actions.plus'), plus_one_user_item_path(item), method: :put
+    .minus
+      = link_to t('.actions.minus'), minus_one_user_item_path(item), method: :put
