@@ -64,7 +64,6 @@ When /^I fullfill edit form$/ do
 end
 
 Then /^I should see modifications done in this item$/ do
-  save_and_open_page
   within 'table#items .snack' do
     page.has_content?('Llauna d\'olives').must_equal true
     page.has_content?('10').must_equal true
