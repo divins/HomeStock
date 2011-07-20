@@ -2,6 +2,7 @@ doctype 5
 html
   head
     title HomeStock
+    = stylesheet_link_tag :application, media: 'screen, projection'
     = javascript_include_tag :application
     = csrf_meta_tags
 
@@ -10,12 +11,12 @@ html
       #top
         #logo
         -if current_user
-          #login_box
-            span
-              = t('app.signed_in_as')
-              strong = current_user.nickname if current_user.nickname
-              strong = current_user.email unless current_user.nickname
-              = link_to t('app.sign_out'), destroy_user_session_path, method: :delete
+        #login_box
+          span
+            = t('app.signed_in_as')
+            strong = current_user.nickname if current_user.nickname
+            strong = current_user.email unless current_user.nickname
+            = link_to t('app.sign_out'), destroy_user_session_path, method: :delete
         -else
           #login_box
             = link_to t("app.sign_in_with_fb"), user_omniauth_authorize_path(:facebook)
