@@ -10,18 +10,13 @@ html
     #wrapper
       #top
         #logo
+
         -if current_user
-        #login_box
-          span
+          #login_box
             = t('app.signed_in_as')
             strong = current_user.nickname if current_user.nickname
             strong = current_user.email unless current_user.nickname
             = link_to t('app.sign_out'), destroy_user_session_path, method: :delete
-        -else
-          #login_box
-            = link_to t("app.sign_in_with_fb"), user_omniauth_authorize_path(:facebook)
-            = link_to t('app.sign_in'), new_user_session_path
-            = link_to t('app.sign_up'), new_user_registration_path
 
       #container
         #content

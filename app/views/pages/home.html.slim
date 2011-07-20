@@ -1,3 +1,10 @@
 h1#description=I18n.t("app.description")
-h2=t("app.access") unless current_user
-h2=t('app.what') if current_user
+
+-if current_user
+  h2=t('app.what') if current_user
+-else
+  h2=t("app.access") unless current_user
+  #login_box
+    = link_to t("app.sign_in_with_fb"), user_omniauth_authorize_path(:facebook)
+    = link_to t('app.sign_in'), new_user_session_path
+    = link_to t('app.sign_up'), new_user_registration_path
