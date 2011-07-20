@@ -9,8 +9,12 @@ Homestock::Application.routes.draw do
   root to: "pages#home"
 
   namespace :user do
-    resources :items
-
+    resources :items do
+      member do
+        put :plus_one
+        put :minus_one
+      end
+    end
     root to: "items#index"
   end
 end
