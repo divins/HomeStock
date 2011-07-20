@@ -1,0 +1,77 @@
+@import includes/base
+
+#user_box
+  float: right
+  width: 400px
+  .user_data
+    float: left
+    font-weight: bold
+  .sign_out
+    float: right
+    a
+      +button-cupid-red
+      font-weight: bold
+      font-size: 0.9em
+      text-decoration: none
+
+#content
+  hgroup
+    float: left
+  #actions
+    margin-left: 25px
+    float: left
+    a
+      +button-clean-gray
+      font-weight: bold
+      font-size: 0.7em
+      text-decoration: none
+
+  #items_wrapper
+    margin: 25px
+    clear: both
+
+    table
+      tr
+        height: 30px
+        border-bottom: 1px solid #eee
+        .actions
+          width: 140px
+          a
+            +button-clean-gray
+            font-size: 0.8em
+            text-decoration: none
+            padding: 1px
+            color: #666
+        .short_description
+          width: 300px
+        .desired_stock
+          width: 50px
+        .actual_stock
+          width: 50px
+          font-weight: bold
+          .ok
+            color: green
+          .need
+            color: orange
+          .outta
+            color: red
+        .control
+          width: 50px
+          .plus
+            float: left
+            a
+              +button-cupid-red
+              font-size: 0.8em
+              text-decoration: none
+              padding: 1px
+              color: #000
+              padding: 2px 5px 2px 5px
+          .minus
+            float: right
+            a
+              +button-cupid-green
+              font-size: 0.8em
+              text-decoration: none
+              padding: 1px
+              color: #000
+              padding: 2px 7px 2px 7px
