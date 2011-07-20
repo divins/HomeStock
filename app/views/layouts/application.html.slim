@@ -12,11 +12,13 @@ html
         #logo
 
         -if current_user
-          #login_box
-            = t('app.signed_in_as')
-            strong = current_user.nickname if current_user.nickname
-            strong = current_user.email unless current_user.nickname
-            = link_to t('app.sign_out'), destroy_user_session_path, method: :delete
+          #user_box
+            .user_data
+              = t('app.signed_in_as')
+              strong = current_user.nickname if current_user.nickname
+              strong = current_user.email unless current_user.nickname
+            .sign_out
+              = link_to t('app.sign_out'), destroy_user_session_path, method: :delete
 
       #container
         #content
