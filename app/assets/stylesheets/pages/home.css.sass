@@ -1,0 +1,76 @@
+@import includes/base
+
+body
+  #top
+    margin: 10px
+    padding: 10px
+    height: 50px
+    background: url(../images/logo.png) top left no-repeat
+
+    #logo
+      float: left
+
+    #login_box
+      float: right
+  #content
+    margin-top: 20px
+    width: 900px
+    hgroup
+      h2, h3
+        margin: 0px
+        padding: 0px
+      h3
+        font-weight: normal
+        font-family: "Georgia"
+        font-size: 1.6em
+        width: 600px
+        margin: 0px
+          bottom: 30px
+
+    p
+      margin-bottom: 1em
+
+    #login_box
+      +border-radius(10px)
+      position: relative
+      overflow: hidden
+      +inline-block
+      margin: 25px
+      width: 200px
+      height: 300px
+      float: left
+      background-color: #222
+      // line-height: 150px
+      text-align: center
+      border: 1px solid #000
+      @include background-image(linear-gradient(color-stops(#000, #333)))
+      +box-shadow(#aaa 0px 3px 6px 0px)
+
+      .sign_in
+        position: absolute
+        left: 0px
+        width: 100%
+        top: 20%
+      .sign_up
+        position: absolute
+        left: 0px
+        width: 100%
+        bottom: 20%
+      a
+        +button-cupid-green
+        font-weight: bold
+        color: #BBB
+        font-size: 0.9em
+        text-decoration: none
+
+    #info
+      margin: 25px
+      width: 500px
+      height: 300px
+      float: right
+      h1
+        font-size: 2em
+        color: #222
+
+  #container
+    overflow: hidden
