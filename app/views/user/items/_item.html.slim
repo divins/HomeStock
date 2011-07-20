@@ -1,10 +1,10 @@
 tr id=dom_id(item) class=item.category
-  td = item.short_description
-  td = item.desired_stock
-  td = item.actual_stock
   td.actions
     = link_to t('.actions.edit'), edit_user_item_path(item)
-    = link_to t('.actions.delete'), user_item_path(item), method: :delete
+    = link_to t('.actions.delete'), user_item_path(item), method: :delete, confirm: t('.confirmations.delete')
+  td.short_description = item.short_description
+  td.desired_stock = item.desired_stock
+  td.actual_stock = item.actual_stock
   td.control
     = link_to t('.actions.plus'), plus_one_user_item_path(item), method: :put
     = link_to t('.actions.minus'), minus_one_user_item_path(item), method: :put

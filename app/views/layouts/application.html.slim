@@ -2,6 +2,8 @@ doctype 5
 html
   head
     title HomeStock
+    = javascript_include_tag :application
+    = csrf_meta_tags
 
   body
     #wrapper
@@ -10,18 +12,20 @@ html
         -if current_user
           #login_box
             span
-              = 'Signed in as: '
+              = t('app.signed_in_as')
               strong = current_user.nickname if current_user.nickname
               strong = current_user.email unless current_user.nickname
+              = link_to t('app.sign_out'), destroy_user_session_path, method: :delete
         -else
           #login_box
-            = link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook)
+            = link_to t("app.sign_in_with_fb"), user_omniauth_authorize_path(:facebook)
+            = link_to t('app.sign_in'), new_user_session_path
+            = link_to t('app.sign_up'), new_user_registration_path
 
       #container
         #content
           = yield
 
       #test
-        =link_to 'blahblah', user_items_path
 
       #footer
