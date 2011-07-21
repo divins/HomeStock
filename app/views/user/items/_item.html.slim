@@ -1,3 +1,8 @@
+-if @current_category != item.category
+  -@current_category = item.category
+  tr class="#{item.category}_row category_row"
+    td colspan=5
+      =t("categories.#{item.category}")
 tr id=dom_id(item) class=item.category
   td.actions
     = link_to t('.actions.edit'), edit_user_item_path(item)
