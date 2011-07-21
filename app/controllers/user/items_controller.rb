@@ -6,6 +6,10 @@ class User::ItemsController < User::ApplicationController
 
   actions :index, :new, :create, :edit, :update, :destroy
 
+  def index
+    @items = Item.category_ordered.stock_ordered
+  end
+
   def plus_one
     resource.plus_one!
     redirect_to :back
