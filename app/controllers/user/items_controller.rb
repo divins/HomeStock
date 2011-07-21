@@ -8,8 +8,6 @@ class User::ItemsController < User::ApplicationController
 
   def index
     @items = Item.category_ordered.stock_ordered
-    puts "ITEMS:"
-    puts @items.inspect
   end
 
   def plus_one
