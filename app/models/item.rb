@@ -17,6 +17,16 @@ class Item < ActiveRecord::Base
     save!
   end
 
+  class << self
+    def category_ordered
+      order('category DESC')
+    end
+    def stock_ordered
+      # order('(actual_stock/desired_stock) ASC')
+      order('actual_stock ASC, desired_stock DESC')
+    end
+  end
+
   private
 
   def check_category

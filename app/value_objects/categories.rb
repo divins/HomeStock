@@ -4,6 +4,7 @@ module Categories
   # Returns all possible categories
   #
   def self.all
-    ['breakfast', 'vegetable', 'fruit', 'fish', 'meat', 'sauces', 'drinks', 'pasta', 'snack' ]
+    ['breakfast', 'vegetable', 'legume', 'fruit', 'fish', 'meat', 'sauces',
+      'drinks', 'pasta', 'snack', 'lactic', 'other', 'hygiene', 'clean' ]
   end
 end
