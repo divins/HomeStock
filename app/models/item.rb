@@ -25,6 +25,9 @@ class Item < ActiveRecord::Base
       # order('(actual_stock/desired_stock) ASC')
       order('actual_stock ASC, desired_stock DESC')
     end
+    def short_description_ordered
+      order('short_description ASC')
+    end
   end
 
   private
