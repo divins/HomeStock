@@ -24,8 +24,18 @@ require 'minitest/spec'
 require 'machinist/active_record'
 require 'database_cleaner'
 DatabaseCleaner.strategy = :transaction
-require 'blueprints'
 
+class MiniTest::Unit::TestCase
+  def setup
+    Machinist.reset_before_test
+    DatabaseCleaner.start
+  end
+  def teardown
+    DatabaseCleaner.clean
+  end
+end
+
+require 'blueprints'
 Dir[Rails.root.join("test/support/**/*.rb")].each {|f| require f}
 require 'minitest/autorun'
 require 'purdytest' unless ENV["RAILSONFIRE"]
