@@ -15,8 +15,13 @@
       text-decoration: none
 
 #content
-  hgroup
-    float: left
+
+  .title
+    hgroup
+      float: left
+      margin-bottom: 25px
+      margin-left: 25px
+
   #actions
     margin-left: 25px
     float: left
@@ -31,23 +36,22 @@
     clear: both
 
     table
+      font-size: 20px
+      min-width: 850px
+      width: 90%
       tr
         height: 30px
         border-bottom: 1px solid #eee
         .actions
-          width: 140px
+          width: 15%
           a
-            +button-clean-gray
-            font-size: 0.8em
-            text-decoration: none
-            padding: 1px
-            color: #666
+            margin-right: 15px
         .short_description
-          width: 300px
+          width: 40%
         .desired_stock
-          width: 50px
+          width: 10%
         .actual_stock
-          width: 50px
+          width: 10%
           font-weight: bold
           .ok
             color: green
@@ -56,7 +60,7 @@
           .outta
             color: red
         .control
-          width: 50px
+          width: 10%
           .plus
             float: left
             a
@@ -83,3 +87,40 @@
         td
           font-weight: bold
           padding-left: 15px
+
+  #edit_item, #new_item
+    .simple_form
+      margin-top: 25px
+      color: #ccc
+      font-weight: bold
+      font-size: 18px
+      +border-radius(10px)
+      position: relative
+      overflow: hidden
+      +inline-block
+      width: 600px
+      height: 250px
+      float: left
+      background-color: #222
+      text-align: center
+      border: 1px solid #000
+      @include background-image(linear-gradient(color-stops(#000, #333)))
+      +box-shadow(#aaa 0px 3px 6px 0px)
+
+      fieldset
+        margin-top: 25px
+        .input
+          margin-bottom: 10px
+          float: right
+          margin-right: 90px
+          select
+            width: 287px
+            margin-left: 15px
+            font-size: 16px
+          input
+            width: 280px
+            margin-left: 15px
+            font-size: 16px
+    button
+      margin-top: 25px
+      +button-cupid-green

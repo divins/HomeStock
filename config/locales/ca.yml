@@ -8,3 +8,8 @@ ca:
     description: "HomeStock és una aplicació que et permet tenir al dia l'inventari dels productes que consumeixes a casa"
     access: "Pots accedir creant una compta desde el formulari inferior o a través de Facebook o Twitter"
     what: "Ja ets un usuari registrat! Ves a les teves dades!"
+
+  helpers:
+    submit:
+      create: "Guardar canvis"
+      update: "Guardar canvis"

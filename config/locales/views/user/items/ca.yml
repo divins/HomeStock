@@ -14,3 +14,6 @@ ca:
           delete: "Estàs segur de voler eliminar aquest producte del llistat?"
       index:
         title: "Llistat de productes"
+        add: "Afegir producte"
+      edit:
+        title: "Modificar producte"
