@@ -1,6 +1,15 @@
 @import includes/base
 
+// +global-reset
+
 body
+  +blueprint-typography(true)
+  +blueprint-utilities
+  +blueprint-debug
+  +blueprint-interaction
+  // Remove the scaffolding when you're ready to start doing visual design.
+  // Or leave it in if you're happy with how blueprint looks out-of-the-box
+  +blueprint-scaffolding
 
 body
   a, a:hover, a:active
@@ -18,7 +27,11 @@ body
     #login_box
       float: right
 
+  #container
+    +container
+
   #content
+    +column(9, true)
     margin-top: 20px
     width: 900px
     hgroup
@@ -35,6 +48,3 @@ body
 
     p
       margin-bottom: 1em
-
-  #container
-    overflow: hidden
