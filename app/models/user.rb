@@ -21,6 +21,7 @@ class User < ActiveRecord::Base
 
   attr_accessible :email, :password, :password_confirmation, :remember_me
 
+  validates :email, presence: true, uniqueness: true
 
   # OMNIAUTH
   def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
