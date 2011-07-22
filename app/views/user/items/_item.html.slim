@@ -5,8 +5,9 @@
       =t("categories.#{item.category}")
 tr id=dom_id(item) class=item.category
   td.actions
-    = link_to t('.actions.edit'), edit_user_item_path(item)
-    = link_to t('.actions.delete'), user_item_path(item), method: :delete, confirm: t('.confirmations.delete')
+    /*= link_to t('.actions.edit'), edit_user_item_path(item)*/
+    = link_to image_tag("edit.png", alt: t('.actions.edit'), size: '18x18'), edit_user_item_path(item)
+    = link_to image_tag("delete.png", alt: t('.actions.delete'), size: '18x18'), user_item_path(item), method: :delete, confirm: t('.confirmations.delete')
   td.short_description = item.short_description
   td.desired_stock = item.desired_stock
   td.actual_stock
