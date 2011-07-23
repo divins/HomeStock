@@ -13,3 +13,6 @@ ca:
     submit:
       create: "Guardar canvis"
       update: "Guardar canvis"
+
+  navigation:
+    back: Tornar

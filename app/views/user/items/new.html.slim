@@ -1,5 +1,6 @@
 #new_item
   hgroup
     h2=t '.title'
+    = link_to t('navigation.back'), user_items_path, class: 'back'
 
   = render 'form'
