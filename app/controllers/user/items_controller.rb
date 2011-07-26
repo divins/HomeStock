@@ -7,7 +7,11 @@ class User::ItemsController < User::ApplicationController
   actions :index, :new, :create, :edit, :update, :destroy
 
   def index
-    @items = collection.category_ordered.short_description_ordered
+    @stock_items = collection.category_ordered.short_description_ordered
+  end
+
+  def shop_list
+      @shop_items = collection.category_ordered.short_description_ordered.shop
   end
 
   def plus_one

@@ -1,0 +1,23 @@
+-item = shop_item
+-if @current_category != item.category
+  -@current_category = item.category
+  tr class="#{item.category}_row category_row"
+    td colspan=6
+      =t("categories.#{item.category}")
+tr id=dom_id(item) class=item.category
+  td.actions
+  td.short_description = item.short_description
+  td.desired_stock = item.desired_stock
+  td.alarm = item.alarm
+  td.actual_stock
+    -if(item.desired_stock <= item.actual_stock)
+      .ok = item.actual_stock
+    -elsif(item.actual_stock <= item.alarm)
+      .outta = item.actual_stock
+    -else
+      .need = item.actual_stock
+  td.control
+    .plus
+      = link_to t('.actions.plus'), plus_one_user_item_path(item), method: :put
+    .minus
+      = link_to t('.actions.minus'), minus_one_user_item_path(item), method: :put

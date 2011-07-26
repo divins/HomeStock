@@ -17,21 +17,29 @@
 #content
 
   .title
+    float: left
+    margin-bottom: 25px
     hgroup
-      float: left
-      margin-bottom: 25px
       margin-left: 25px
 
   #actions
-    margin-left: 25px
-    float: left
-    a
-      +button-clean-gray
-      font-weight: bold
-      font-size: 0.7em
-      text-decoration: none
+    margin-right: 110px
+    float: right
+    // line-height: 50px
+    .image_link
+      float: left
+      margin-right: 35px
+      margin-top: -15px
+    .button_link
+      float: right
+      a
+        +button-clean-gray
+        font-weight: bold
+        font-size: 0.7em
+        text-decoration: none
 
   #items_wrapper
+    float: none
     margin: 25px
     clear: both
 
