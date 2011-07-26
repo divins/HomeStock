@@ -13,24 +13,24 @@
 ActiveRecord::Schema.define(:version => 20110725184900) do
 
   create_table "items", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "category"
-    t.string   "short_description"
-    t.integer  "desired_stock"
-    t.integer  "actual_stock"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "alarm"
+    t.integer   "user_id"
+    t.string    "category"
+    t.string    "short_description"
+    t.integer   "desired_stock"
+    t.integer   "actual_stock"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "alarm"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "nickname"
-    t.string   "avatar"
-    t.string   "email",                              :default => "", :null => false
-    t.string   "encrypted_password",  :limit => 128, :default => "", :null => false
-    t.datetime "remember_created_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "nickname"
+    t.string    "avatar"
+    t.string    "email",                              :default => "", :null => false
+    t.string    "encrypted_password",  :limit => 128, :default => "", :null => false
+    t.timestamp "remember_created_at"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
