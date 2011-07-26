@@ -3,6 +3,7 @@
     = form.input :category, collection: @categories, include_blank: t('categories.blank')
     = form.input :short_description
     = form.input :desired_stock
+    = form.input :alarm
     = form.input :actual_stock
   .submit
     = form.submit id: 'new_item_commit'
