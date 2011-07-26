@@ -12,11 +12,16 @@ ca:
           minus: '-'
         confirmations:
           delete: "Estàs segur de voler eliminar aquest producte del llistat?"
+      shop_item:
+        actions:
+          plus: '+'
+          minus: '-'
       index:
         list_title: "Llistat de productes"
-        show_list_list: "Mostrar la llista de productes"
         add: "Afegir producte"
         show_shop_list: "Mostrar la llista de la compra"
-        shop_title: "Llista de la compra"
       edit:
         title: "Modificar producte"
+      shop_list:
+        show_stock_list: "Mostrar la llista de productes"
+        shop_title: "Llista de la compra"
