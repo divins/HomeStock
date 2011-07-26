@@ -1,13 +1,14 @@
 .title
   hgroup
-    h2= t '.title'
+    h2= t '.list_title'
 
 #actions
-  =link_to t('.add'), action: 'new'
+  .image_link=link_to image_tag('shop_cart.png', alt: t('.show_shop_list'), size: '45x45'), shop_list_user_item_path
+  .button_link=link_to t('.add'), action: 'new'
 
 #items_wrapper
-  -if @items.empty?
+  -unless @stock_items.any?
     p=t('.no_item')
   -else
     table#items
-      = render partial: 'item', collection: @items
+      = render partial: 'item', collection: @stock_items

@@ -13,7 +13,10 @@ ca:
         confirmations:
           delete: "Estàs segur de voler eliminar aquest producte del llistat?"
       index:
-        title: "Llistat de productes"
+        list_title: "Llistat de productes"
+        show_list_list: "Mostrar la llista de productes"
         add: "Afegir producte"
+        show_shop_list: "Mostrar la llista de la compra"
+        shop_title: "Llista de la compra"
       edit:
         title: "Modificar producte"

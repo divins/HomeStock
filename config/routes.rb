@@ -14,6 +14,7 @@ Homestock::Application.routes.draw do
         put :plus_one
         put :minus_one
       end
+      resource :shop_list
     end
     root to: "items#index"
   end

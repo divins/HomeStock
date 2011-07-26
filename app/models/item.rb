@@ -31,6 +31,9 @@ class Item < ActiveRecord::Base
     def short_description_ordered
       order('short_description ASC')
     end
+    def shop
+      where('actual_stock <= alarm')
+    end
   end
 
   private
