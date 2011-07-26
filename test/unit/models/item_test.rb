@@ -26,7 +26,8 @@ describe Item do
     end
     it "is not valid without desired stock" do
       @item.desired_stock = nil
-      @item.valid?.must_equal false
+      @item.valid?
+      @item.desired_stock.must_equal 0
     end
     it "is not valid with subzero desired stock" do
       @item.desired_stock = -1
@@ -34,7 +35,8 @@ describe Item do
     end
     it "is not valid without actual stock" do
       @item.actual_stock = nil
-      @item.valid?.must_equal false
+      @item.valid?
+      @item.actual_stock.must_equal 0
     end
     it "is not valid with subzero actual stock" do
       @item.actual_stock = -1

@@ -1,11 +1,15 @@
 class Item < ActiveRecord::Base
   belongs_to :user
 
+  before_validation :default_values
+
   validates :short_description, presence: true
   validates :desired_stock, presence: true, numericality: {greater_than_or_equal_to: 0}
+  validates :alarm, presence: true, numericality: {greater_than_or_equal_to: 0}
   validates :actual_stock, presence: true, numericality: {greater_than_or_equal_to: 0}
   validates :category, presence: true
   validate :check_category
+  validate :check_alarm
 
   def plus_one!
     self.actual_stock = self.actual_stock+1
@@ -22,8 +26,7 @@ class Item < ActiveRecord::Base
       order('category DESC')
     end
     def stock_ordered
-      # order('(actual_stock/desired_stock) ASC')
-      order('actual_stock ASC, desired_stock DESC')
+      order('actual_stock ASC, alarm DESC')
     end
     def short_description_ordered
       order('short_description ASC')
@@ -32,7 +35,17 @@ class Item < ActiveRecord::Base
 
   private
 
+  def default_values
+    self.desired_stock ||= 0
+    self.alarm ||= 0
+    self.actual_stock ||= 0
+  end
+
   def check_category
     errors.add :category, :invalid_category unless Categories.all.include? self.category
+  end
+
+  def check_alarm
+    errors.add :alarm, :invalid_alarm unless self.desired_stock >= self.alarm
   end
 end

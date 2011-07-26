@@ -13,5 +13,6 @@ Item.blueprint do
   category { "meat" }
   short_description { "Item #{sn}" }
   desired_stock { rand(4) }
+  alarm { 0 }
   actual_stock { rand(4) }
 end
