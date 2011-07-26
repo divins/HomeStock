@@ -1,0 +1,13 @@
+.title
+  hgroup
+    h2= t '.shop_title'
+
+#actions
+  .image_link=link_to image_tag('stock_list.png', alt: t('.show_stock_list'), size: '37x37'), user_items_path
+
+#items_wrapper
+  -unless @shop_items.any?
+    p=t('.no_item')
+  -if @shop_items.any?
+    table#items
+      = render partial: 'shop_item', collection: @shop_items

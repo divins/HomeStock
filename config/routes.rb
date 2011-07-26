@@ -10,6 +10,9 @@ Homestock::Application.routes.draw do
 
   namespace :user do
     resources :items do
+      collection do
+        get :shop_list
+      end
       member do
         put :plus_one
         put :minus_one
